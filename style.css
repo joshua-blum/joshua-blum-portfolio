@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
-    font-family: 'Tahoma'
+    font-family: 'Tahoma';
+}
+
+hr {
+    width: 75%;
+    border: 2px dotted #337704
 }
 
 section, footer {
@@ -51,12 +56,11 @@ nav a:hover {
 
 .about-me {
     display: flex;
-    justify-content: center;
     align-items: center;
+    font-size: 20px;
     padding: 20px;
     background-color: #44463d
 }
-
 
 .hero-image {
     height: 80%;
@@ -214,5 +218,15 @@ li {
     section.about-me div.about-me-image {
         display: flex;
         justify-content: center;
+    }
+
+    section.skills div.logos figure {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 610px){
+    section.skills div.logos figure {
+        width: 75%;
     }
 }
