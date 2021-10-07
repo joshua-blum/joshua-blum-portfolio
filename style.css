@@ -23,13 +23,18 @@ img {
     padding: 10px;
 }
 
+header {
+    position: absolute;
+    width:100%;
+}
 
-header, nav {
+header, header nav {
     background-color: #44463d;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     opacity: 0.9;
+    z-index: 10000;
 }
 
 
@@ -72,21 +77,13 @@ nav a:hover {
     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./images/leaf-drops.jpg');
 }
 
-.hero-text {
-    display: block;
-    text-align: left;
+div.hero-text {
+    display: flex;
     position: absolute;
     bottom: 20%;
+    right: 5%;
     color: white;
     font-size: 30px;
-}
-
-.hero-text-right {
-    right: 5%;
-}
-
-.hero-text-center {
-    left: 50%
 }
 
 a.button {
@@ -203,4 +200,19 @@ li {
     padding: 3px;
     margin: 5px;
     list-style-type: none;
+}
+
+@media screen and (max-width: 850px){
+    nav span {
+        display: none;
+    }
+    section.about-me {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    section.about-me div.about-me-image {
+        display: flex;
+        justify-content: center;
+    }
 }
